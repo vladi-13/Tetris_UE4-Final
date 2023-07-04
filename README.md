@@ -1,2 +1,10 @@
 # Tetris_UE4
-tetris for ue4 pure c++
+![image](https://github.com/vladi-13/Tetris_UE4-Final/assets/126740932/aeef3cbd-4c61-4de6-8ca3-792dc821e194)
+![image](https://github.com/vladi-13/Tetris_UE4-Final/assets/126740932/99aa394d-f974-4fb9-a3e5-680438b288e3)
+![image](https://github.com/vladi-13/Tetris_UE4-Final/assets/126740932/6ad84f8a-e3eb-4975-97aa-f525fb3363df)
+IMPLEMENTACION
+Para controlar los puntajes, se usó el patrón Observer, el cual tendrá diferentes atributos depende a lo que se requiera, como ser los puntos que aumentaran de 100 en 100 si se completa una línea, de 1 en 1 las líneas completadas, de 10 en 10 los bloques destruidos y de 1 en 1 cada que se genere una nueva pieza.
+Para la creación de las siguientes piezas se usó lo que es vectores para almacenar las coordenadas y así lograr la rotación entre sus posiciones, para almacenar las piezas se uso lo que es Array, un contenedor avanzado el cual almacenara las siguientes piezas, de tal manera que se pueda controlar cuantas piezas queremos que se muestren en el juego o escenario.
+Para la creación de escenarios, se usó el patrón State, el cual nos permitirá cambiar de escena cada vez que se complete una línea, es decir que depende al estado del juego, cambiara de escenario, en este caso tome en cuenta el estado cuando se complete una línea y cambiara de escenario.
+Para las modalidades de juego, se usó el patrón Facade, para que se generen bloques o piezas dentro del tablero con el fin de molestar el modo de juego del jugador, este patron es llamado en la clase board ya que el modo de juego se activara al presionar la tecla ‘C’, de este modo usaríamos la clase board.
+Para la interfaz gráfica se usó lo que son los widgets, los cuales contendrán el inicio de juego como ser el menú donde nos aparezca las opciones de “Jugar”, “Controles” y “Salir”, también se uso los widgets para el fin y reinicio del juego, donde en el momento que se pierda el juego o la partida, nos saldrá un menú de fin de juego que nos aparecerá las opciones de “Reiniciar” y “Salir”, así controlaríamos el fin y reinicio del juego.
